@@ -1,0 +1,31 @@
+.footer {
+  text-align: center;
+  padding: 1rem 0; // very compact
+  background: var(--background);
+  border-top: 1px solid var(--border);
+  color: var(--muted-foreground);
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+
+  .footer-text {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .footer-title {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+
+    .footer-name {
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--primary), #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
+}

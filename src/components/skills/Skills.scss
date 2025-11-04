@@ -1,0 +1,111 @@
+@use "../../styles/_theme-vars.scss" as *;
+
+.skills {
+  padding: 0 2rem 6rem 2rem;
+  background: var(--background);
+  color: var(--foreground);
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  .skills__header {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+
+    .skills__tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--primary);
+      background: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .skills__title {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .skills__underline {
+      width: 70px;
+      height: 3px;
+      background: var(--primary);
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+
+    .skills__subtitle {
+      margin-top: 1rem;
+      color: var(--muted-foreground);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+  }
+
+  .skills__categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* Individual category card */
+  .skill-category {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    &__title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    /* Vertical list inside the card */
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background: var(--secondary);
+        transform: translateX(5px);
+      }
+
+      &__icon {
+        font-size: 1.8rem;
+      }
+
+      &__name {
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--foreground);
+      }
+    }
+  }
+}

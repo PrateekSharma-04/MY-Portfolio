@@ -1,0 +1,135 @@
+@use "../../styles/_theme-vars.scss" as *;
+
+.hero-section {
+  background: var(--background);
+  color: var(--foreground);
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      text-align: center;
+      gap: 3rem;
+    }
+  }
+
+  .hero-left {
+    flex: 1;
+
+    .available-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent);
+      color:  var(--chart-1);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      transition: background 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background: var(--secondary);
+      }
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+
+      .highlight {
+        color: var(--chart-1);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .hero-role {
+      font-size: 1.75rem;
+      font-weight: var(--font-weight-medium);
+      color: var(--muted-foreground);
+      margin-bottom: 1rem;
+    }
+
+    .hero-desc {
+      color: var(--muted-foreground);
+      line-height: 1.6;
+      max-width: 500px;
+      margin-bottom: 2rem;
+
+      @media (max-width: 900px) {
+        margin-inline: auto;
+      }
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+
+      .btn-primary {
+        background: linear-gradient(90deg, var(--chart-1), var(--chart-2));
+        color: var(--primary-foreground);
+        border: none;
+        border-radius: var(--radius);
+        padding: 0.8rem 1.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.3s ease;
+        box-shadow: 0px 4px 12px rgba(37, 99, 235, 0.4);
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0px 6px 16px rgba(37, 99, 235, 0.6);
+        }
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--foreground);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 0.8rem 1.8rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: var(--secondary);
+          border-color: var(--foreground);
+        }
+      }
+    }
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
+}

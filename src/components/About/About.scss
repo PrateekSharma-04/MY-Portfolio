@@ -1,0 +1,129 @@
+@use "../../styles/_theme-vars.scss" as *;
+
+.about {
+  padding: 0 2rem 6rem 2rem;
+  background: var(--background);
+  color: var(--foreground);
+  transition: background 0.3s ease, color 0.3s ease;
+
+  .about__header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .about__tag {
+      display: inline-block;
+      font-size: 0.85rem;
+      color: var(--primary);
+      background: var(--accent);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .about__title {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .about__underline {
+      width: 70px;
+      height: 3px;
+      background: var(--primary);
+      margin: 0.5rem auto;
+      border-radius: 2px;
+    }
+  }
+
+  .about__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+
+  .about__image-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .about__image {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .about__image:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  .about__content {
+    .about__text {
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+      color: var(--muted-foreground);
+      font-size: 0.98rem;
+    }
+
+    .about__grid {
+      margin-top: 1.8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .info-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    &__icon {
+      width: 45px;
+      height: 45px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border-radius: 10px;
+    }
+
+    &__content {
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+        color: var(--foreground);
+      }
+      p {
+        margin: 0.2rem 0 0;
+        color: var(--muted-foreground);
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

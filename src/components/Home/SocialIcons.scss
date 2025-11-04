@@ -1,0 +1,27 @@
+.social-icons {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    font-size: 1.5rem;
+    color: var(--muted-foreground);
+    background: var(--secondary);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: var(--chart-1);
+      color: var(--primary-foreground);
+      transform: translateY(-3px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
+}
