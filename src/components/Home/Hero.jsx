@@ -5,7 +5,7 @@ import SkillGrid from "./SkillGrid";
 import LogoIcon from "../Common/LogoIcon";
 
 export default function Hero() {
-  // 👇 Function to handle smooth scroll
+  // Function to handle smooth scroll
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -35,7 +35,7 @@ export default function Hero() {
             solutions that make a difference.
           </p>
 
-          {/* ✅ Scroll Buttons */}
+          {/* Scroll Buttons */}
           <div className="hero-buttons">
             <button
               className="btn-primary"

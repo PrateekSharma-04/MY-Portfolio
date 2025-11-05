@@ -1,7 +1,7 @@
-// src/components/Contact/Contact.jsx
 import React, { useState } from "react";
 import "./Contact.scss";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -10,15 +10,34 @@ export default function Contact() {
     message: "",
   });
 
+  const [isSending, setIsSending] = useState(false);
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Message Sent:", form);
-    setForm({ name: "", email: "", message: "" });
-    alert("Your message has been sent successfully!");
+    setIsSending(true);
+
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID, // Service ID
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID, // Template ID
+        form, // name, email, message
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY // Public Key
+      )
+      .then(
+        () => {
+          alert(" Your message has been sent successfully!");
+          setForm({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.error(" EmailJS Error:", error.text);
+          alert("Something went wrong. Please try again later.");
+        }
+      )
+      .finally(() => setIsSending(false));
   };
 
   return (
@@ -70,8 +89,8 @@ export default function Contact() {
           ></textarea>
         </div>
 
-        <button type="submit" className="send-btn">
-          Send Message <FaEnvelope />
+        <button type="submit" className="send-btn" disabled={isSending}>
+          {isSending ? "Sending..." : "Send Message"} <FaEnvelope />
         </button>
       </form>
 
@@ -97,7 +116,15 @@ export default function Contact() {
           <span>LinkedIn</span>
         </div>
         <div className="social-item">
-          <a href="mailto:prateek.oct04@gmail.com">
+          <a
+            onClick={() => {
+              const section = document.getElementById("contact");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+            style={{ cursor: "pointer" }}
+          >
             <FaEnvelope />
           </a>
           <span>Email</span>
