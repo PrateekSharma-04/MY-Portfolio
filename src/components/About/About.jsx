@@ -2,7 +2,7 @@ import React from "react";
 import "./About.scss";
 import InfoCard from "./InfoCard";
 import infoCards from "./data";
-import profileImage from "../../assets/icons/profile.jpg"; // change to your real image path
+import profileImage from "../../assets/icons/my-image.jpg"; // change to your real image path
 
 export default function About() {
   return (

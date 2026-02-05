@@ -4,7 +4,7 @@ import project3 from "../../assets/icons/project3.jpg";
 
 export const projects = [
   {
-    title: "Wanderlust – Airbnb Replica",
+    title: "Wanderlust – Airbnb Replica", 
     description:
       "A full-featured stay booking platform with listings, maps, and user authentication built using the MERN stack.",
     tech: ["React", "Node.js", "MongoDB", "Express"],

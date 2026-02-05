@@ -4,7 +4,7 @@ import { lightTheme, darkTheme } from "../theme/theme.js";
 import { ThemeContext } from "./ThemeContext.js";
 
 export default function ThemeContextProvider({ children }) {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const theme = useMemo(() => (isDark ? darkTheme : lightTheme), [isDark]);
 
   useEffect(() => {
