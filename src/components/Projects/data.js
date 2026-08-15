@@ -25,7 +25,7 @@ export const projects = [
     title: "ManoVa (AI-Powered Mental Health Tracker)",
     description:
       "A mental wellness web app offering mood tracking, journaling, and support features with help of AI.",
-    tech: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "AI/ML"],
+    tech: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "AI/ML"],
     image: project3,
     code: "https://github.com/PrateekSharma-04/Manova",
   },
