@@ -7,24 +7,26 @@ export const projects = [
     title: "Wanderlust – Airbnb Replica", 
     description:
       "A full-featured stay booking platform with listings, maps, and user authentication built using the MERN stack.",
-    tech: ["React", "Node.js", "MongoDB", "Express"],
+    tech: ["MongoDB", "Express.js", "Node.js", "JavaScript", "HTML", "CSS"],
     image: project1,
     code: "https://github.com/PrateekSharma-04/wanderlust-website",
     demo: "https://wanderlust-website-x2x4.onrender.com/",
   },
   {
-    title: "DevBhoomi (Tourism Platform)",
+    title: "VihaRa (Tourism Platform)",
     description:
       "A tourism platform promoting rural destinations with live maps, weather, and AR vision integration.",
-    tech: ["Node.js", "MongoDB", "Express", "JWT"],
+    tech: [ "Node.js", "Express.js", "MongoDB", "REST APIs", "AI Integration"],
     image: project2,
-    demo: "https://www.figma.com/make/0dPxpDQnVcJGO5PMDqz8kr/Devbhoomi-app?node-id=0-1&t=rEjzD24PHAKWnFi8-1",
+    code:"https://github.com/PrateekSharma-04/VihaRa-Project",
+    demo: "https://viha-ra-project.vercel.app/",
   },
   {
-    title: "Analytics Dashboard",
+    title: "ManoVa (AI-Powered Mental Health Tracker)",
     description:
       "A mental wellness web app offering mood tracking, journaling, and support features with help of AI.",
-    tech: ["React", "APIs", "MongoDB", "Express"],
+    tech: ["Flutter", "Dart", "FastAPI", "Python", "PostgreSQL", "SQLAlchemy", "JWT", "AI/ML"],
     image: project3,
+    code: "https://github.com/PrateekSharma-04/Manova",
   },
 ];
