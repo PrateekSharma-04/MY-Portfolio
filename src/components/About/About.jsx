@@ -16,21 +16,27 @@ export default function About() {
       <div className="about__container">
         {/* Left Side Image */}
         <div className="about__image-wrapper">
-          <img src={profileImage} alt="Prateek Sharma" className="about__image" />
+          <img
+            src={profileImage}
+            alt="Prateek Sharma"
+            className="about__image"
+          />
         </div>
 
         {/* Right Side Info */}
         <div className="about__content">
           <p className="about__text">
-            I'm a passionate Full Stack Developer with a keen interest in building modern web
-            applications that solve real-world problems. With expertise in both frontend and
-            backend technologies, I bring ideas to life through clean, efficient code.
+            I'm an AI-Native Full Stack Developer and B.Tech graduate in
+            Information Technology, passionate about building practical
+            applications that combine modern web development with AI.
           </p>
 
           <p className="about__text">
-            My journey in web development started with curiosity about how things work on the
-            internet. Today, I specialize in the MERN stack and love exploring new technologies
-            that push the boundaries of what's possible on the web.
+            I enjoy working across the stack - from creating responsive
+            interfaces and REST APIs to developing AI-powered features using
+            Python, NLP and LLM technologies. Through internships and personal
+            projects, I've worked on solutions ranging from resume analysis and
+            financial analytics to AI-powered applications.
           </p>
 
           <div className="about__grid">

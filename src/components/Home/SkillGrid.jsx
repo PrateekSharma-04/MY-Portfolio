@@ -2,26 +2,26 @@ import React from "react";
 import "./SkillGrid.scss";
 import {
   FaCode,
+  FaBrain,
   FaDatabase,
   FaServer,
-  FaGlobe,
-  FaBolt,
-  FaMobileAlt,
+  FaRobot,
   FaCloud,
-  FaCogs,
-  FaTerminal,
+  FaNetworkWired,
+  FaLaptopCode,
+  FaRocket,
 } from "react-icons/fa";
 
 const skills = [
-  FaCode,         
-  FaDatabase,    
-  FaServer,      
-  FaGlobe,       
-  FaBolt,        
-  FaMobileAlt,   
-  FaCloud,      
-  FaCogs,      
-  FaTerminal,    
+  FaCode,
+  FaBrain,
+  FaDatabase,
+  FaServer,
+  FaRobot,
+  FaCloud,
+  FaNetworkWired,
+  FaLaptopCode,
+  FaRocket,
 ];
 
 export default function SkillGrid() {

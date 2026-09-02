@@ -12,7 +12,7 @@ const infoCards = [
     id: 2,
     Icon: FaBriefcase,
     title: "Experience",
-    text: "Exploring Real-world Development",
+    text: "AI Intern — The Entrepreneurship Network",
     color: "#A855F7",
   },
   {
@@ -26,7 +26,7 @@ const infoCards = [
     id: 4,
     Icon: FaCode,
     title: "Projects",
-    text: "Ongoing Projects",
+    text: "Multiple Full Stack & AI Projects",
     color: "#F97316",
   },
 ];

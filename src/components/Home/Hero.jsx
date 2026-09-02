@@ -27,12 +27,12 @@ export default function Hero() {
             <span className="highlight">Hi, I'm Prateek Sharma</span>
           </h1>
 
-          <h2 className="hero-role">Full Stack Developer</h2>
+          <h2 className="hero-role">AI-Native Full Stack Developer</h2>
 
           <p className="hero-desc">
-            I build scalable web applications using React, Node.js, and MongoDB.
-            Passionate about creating seamless user experiences and efficient
-            solutions that make a difference.
+            I build scalable web applications and AI-powered products by
+            combining modern full-stack development with AI, NLP and LLM
+            technologies.
           </p>
 
           {/* Scroll Buttons */}
@@ -41,7 +41,7 @@ export default function Hero() {
               className="btn-primary"
               onClick={() => scrollToSection("projects")}
             >
-              View My Work →
+              View My Work &#8594;
             </button>
 
             <button

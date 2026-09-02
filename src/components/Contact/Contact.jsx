@@ -29,7 +29,7 @@ export default function Contact() {
       )
       .then(
         () => {
-          alert(" Your message has been sent successfully!");
+          alert("Your message has been sent successfully!");
           setForm({ name: "", email: "", message: "" });
         },
         (error) => {
