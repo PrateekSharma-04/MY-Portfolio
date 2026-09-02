@@ -36,12 +36,24 @@ export default function Projects() {
    */
   useEffect(() => {
     const activeThumbnail = thumbnailRefs.current[activeIndex];
+    const container = document.querySelector(".projects-thumbnails-track");
 
-    if (activeThumbnail) {
-      activeThumbnail.scrollIntoView({
+    if (!activeThumbnail || !container) return;
+
+    const containerLeft = container.getBoundingClientRect().left;
+    const containerRight = container.getBoundingClientRect().right;
+    const thumbnailLeft = activeThumbnail.getBoundingClientRect().left;
+    const thumbnailRight = activeThumbnail.getBoundingClientRect().right;
+
+    if (thumbnailLeft < containerLeft) {
+      container.scrollBy({
+        left: thumbnailLeft - containerLeft,
         behavior: "smooth",
-        block: "nearest",
-        inline: "center",
+      });
+    } else if (thumbnailRight > containerRight) {
+      container.scrollBy({
+        left: thumbnailRight - containerRight,
+        behavior: "smooth",
       });
     }
   }, [activeIndex]);
@@ -50,7 +62,7 @@ export default function Projects() {
     <section className="projects" id="projects">
       {/* SECTION HEADER */}
       <div className="projects-header">
-        <span className="projects-tag">Portfolio</span>
+        <span className="projects-tag">Projects</span>
 
         <h2 className="projects-title">Featured Projects</h2>
 
@@ -64,7 +76,6 @@ export default function Projects() {
 
       {/* MAIN PROJECT CAROUSEL */}
       <div className="projects-carousel">
-
         {/* PREVIOUS PROJECT */}
         <button
           type="button"
@@ -97,9 +108,7 @@ export default function Projects() {
           <button
             key={project.id || index}
             type="button"
-            className={`project-dot ${
-              index === activeIndex ? "active" : ""
-            }`}
+            className={`project-dot ${index === activeIndex ? "active" : ""}`}
             onClick={() => goToProject(index)}
             aria-label={`Go to ${project.title}`}
             aria-current={index === activeIndex ? "true" : undefined}
@@ -109,14 +118,13 @@ export default function Projects() {
 
       {/* THUMBNAIL CAROUSEL */}
       <div className="projects-thumbnails-wrapper">
-
         {/* THUMBNAIL PREVIOUS */}
         <button
           type="button"
           className="thumbnail-arrow thumbnail-arrow--prev"
           onClick={() => {
             const container = document.querySelector(
-              ".projects-thumbnails-track"
+              ".projects-thumbnails-track",
             );
 
             if (container) {
@@ -153,7 +161,7 @@ export default function Projects() {
           className="thumbnail-arrow thumbnail-arrow--next"
           onClick={() => {
             const container = document.querySelector(
-              ".projects-thumbnails-track"
+              ".projects-thumbnails-track",
             );
 
             if (container) {
